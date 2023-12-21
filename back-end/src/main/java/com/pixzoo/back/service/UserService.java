@@ -64,12 +64,21 @@ public class UserService {
         Customer existingCustomer = customerRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Customer not found"));
 
-        existingCustomer.setName(request.getName());
-        existingCustomer.setEmail(request.getEmail());
-        existingCustomer.setAmountDeposited(request.getAmountDeposited());
+        if (request.getName() != null) {
+            existingCustomer.setName(request.getName());
+        }
+
+        if (request.getEmail() != null) {
+            existingCustomer.setEmail(request.getEmail());
+        }
+
+        if (request.getAmountDeposited() != null) {
+            existingCustomer.setAmountDeposited(request.getAmountDeposited());
+        }
 
         return customerRepository.save(existingCustomer);
     }
+
 
     public void deleteCustomer(Long id) {
         Customer existingCustomer = customerRepository.findById(id)
