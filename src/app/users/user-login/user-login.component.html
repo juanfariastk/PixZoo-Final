@@ -1,0 +1,28 @@
+<div class="login-form-flex">
+    <mat-card class="custom-card">
+      <img class="logo" src="../../../assets/PixZooLogo.png" alt="Logotipo">
+      <mat-card-title class="form-title">
+        Iniciar Sessão
+      </mat-card-title>
+      <mat-card-content>
+        <form #loginForm="ngForm"> 
+          <mat-form-field class="full-width">
+            <input matInput type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+          </mat-form-field>
+          <br/>
+          <mat-form-field class="full-width">
+            <input type="password" matInput placeholder="Senha" [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="button-flex-container">
+          <button mat-raised-button color="primary"  (click)="login()"  [disabled]="!loginForm?.valid">Entrar</button>
+        </div>
+      </mat-card-actions>
+      <div class="register-text">
+        Ainda não possui uma conta? <a routerLink="/register">Registre-se!</a>
+      </div>
+    </mat-card>
+  </div>
+  

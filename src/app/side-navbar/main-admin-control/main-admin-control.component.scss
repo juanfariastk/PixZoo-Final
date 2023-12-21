@@ -1,0 +1,97 @@
+.admin-control-container {
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+  
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    label {
+      font-size: 16px;
+    }
+  
+    .input-container {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      margin: 5px 0;
+  
+      mat-form-field {
+        flex: 1;
+        margin-right: 0px;
+      }
+  
+      button {
+        margin: -23px -2px 0px 0px;
+        padding: 28px;
+        background-color: rgb(100, 169, 94) !important;
+        color: white;
+        
+        span{
+          color: rgb(245, 245, 245);
+        }
+      }
+    }
+  
+    h2 {
+      font-size: 25px;
+      font-weight: lighter;
+      margin: 5px 0px 23px 0px;
+    }
+
+    .animal-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+  
+    .animal-card {
+      display: inline-block;
+      width: 250px;
+      margin: 10px 20px 10px 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+  
+      img {
+        display: block;
+        margin: 10px auto 0 auto;
+        max-width: 80%;
+        clip-path: inset(2px);
+      }
+  
+      p {
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      .animal-name{
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+
+    button {
+        margin: 10px 0px 0px 0px;
+        padding: 10px;
+        background-color: #858fa3 !important;
+        color: white;
+        
+        span{
+          color: rgb(245, 245, 245);
+        }
+      }
+  }
+  

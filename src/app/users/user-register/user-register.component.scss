@@ -1,0 +1,66 @@
+.register-form-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-title {
+    margin: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color:#4a4a4a;
+  }
+  
+  .custom-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    .full-width {
+      width: 100%;
+    }
+  }
+  
+  .button-flex-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  
+    button {
+        color: #fff;
+        background-color: rgb(100, 169, 94);
+        transition: background-color 0.7s; 
+    
+        &:disabled {
+          background-color: #ccc; 
+          cursor: not-allowed; 
+        }
+    }
+  }
+
+  .login-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+  
+  .login-text a {
+    color: #484848; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-text a:hover {
+    text-decoration: underline;
+  }
+  
+.error-message-409 {
+    text-align: center; 
+    font-size: 14px; 
+    color: #d65858; 
+    margin: 5px; 
+    font-weight: bold; 
+}

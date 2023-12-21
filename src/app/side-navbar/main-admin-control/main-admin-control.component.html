@@ -1,0 +1,34 @@
+<div class="admin-control-container">
+    <h2>Sorteio de Animais</h2>
+    <div class="input-container">
+      <mat-form-field class="mat-input">
+        <mat-label>Definir o número de animais para sortear</mat-label>
+        <input matInput type="text" id="drawInput" [(ngModel)]="drawInput" />
+      </mat-form-field>
+      <button mat-button (click)="sortAnimals()">Sortear</button>
+    </div>
+    <div *ngIf="animalDraws.length > 0">
+      <h3>Animais Sorteados:</h3>
+      <div class="animal-card-container">
+        <mat-card *ngFor="let draw of animalDraws" class="animal-card">
+          <img [src]="getAnimalData(draw.key).url" alt="{{ getAnimalData(draw.key).name }}" class="animal-image" />
+          <div class="animal-name">{{ getAnimalData(draw.key).name }}</div>
+        </mat-card>
+      </div>
+    </div>
+    <button mat-button *ngIf="animalDraws.length > 0" (click)="setDraw()">Definir Sorteio</button>
+  </div>  
+
+<div class="admin-control-container" *ngIf="showCurrentDraw">
+    <h2>Sorteio Atual</h2>
+    <div class="animal-card-container">
+      <ng-container *ngFor="let draw of actualDrawData">
+        <ng-container *ngIf="!isCreatedAt(draw)">
+          <mat-card class="animal-card">
+            <img [src]="getAnimalImageUrl(draw)" alt="{{ getAnimalName(draw) }}" class="animal-image" />
+            <div class="animal-name">{{ getAnimalName(draw) }}</div>
+          </mat-card>
+        </ng-container>
+      </ng-container>
+    </div>
+</div>

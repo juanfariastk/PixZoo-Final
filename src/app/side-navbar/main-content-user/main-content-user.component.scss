@@ -1,0 +1,107 @@
+.diff-border{
+  border: 10px solid black;
+  border-image: url('../../../assets/grass_PNG109092.png')  30 round;
+}
+
+h2{
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.custom-size-field{
+  width: 65%;
+  margin:10px;
+}
+
+.user-data {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  width: 700px;
+
+  button{
+    margin:5px;
+  }
+}
+
+.user-bets {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.bet-card {
+  margin: 10px; 
+  padding: 5px;
+  width: 100%;
+}
+
+.bet-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+}
+
+.animal-details {
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: nowrap;
+}
+
+.animal-image {
+  max-width: 100px; 
+  height: auto;
+}
+
+.readonly {
+  input {
+    cursor: pointer;
+  }
+}
+.actual-draw-container{
+  background-color: #f5f5f5;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+  .animal-card-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 5px;
+    
+    h3{
+      font-weight: 500;
+      text-align: center;
+      margin: 5px;
+    }
+
+    img{
+      display:block;
+      margin: 5px auto 0 auto;
+      max-width: 80%;
+      clip-path: inset(2px);
+
+
+    }
+    .animal-card{
+      display: inline-block;
+      width: 250px;
+      margin: 10px 20px 10px 20px;
+      box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+
+
+}

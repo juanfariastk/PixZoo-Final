@@ -1,0 +1,28 @@
+import { Animal } from "../types/animal.type";
+export const animalsArray: Animal[] = [
+  { name: "01-AVESTRUZ", url: "../../../assets/animalsImages/avestruz.png", value: [1, 2, 3, 4] },
+  { name: "02-ÁGUIA", url: "../../../assets/animalsImages/aguia.png", value: [5, 6, 7, 8] },
+  { name: "03-BURRO", url: "../../../assets/animalsImages/burro.png", value: [9, 10, 11, 12] },
+  { name: "04-BORBOLETA", url: "../../../assets/animalsImages/borboleta.png", value: [13, 14, 15, 16] },
+  { name: "05-CACHORRO", url: "../../../assets/animalsImages/cachorro.png", value: [17, 18, 19, 20] },
+  { name: "06-CABRA", url: "../../../assets/animalsImages/cabra.png", value: [21, 22, 23, 24] },
+  { name: "07-CARNEIRO", url: "../../../assets/animalsImages/carneiro.png", value: [25, 26, 27, 28] },
+  { name: "08-CAMELO", url: "../../../assets/animalsImages/camelo.png", value: [29, 30, 31, 32] },
+  { name: "09-COBRA", url: "../../../assets/animalsImages/cobra.png", value: [33, 34, 35, 36] },
+  { name: "10-COELHO", url: "../../../assets/animalsImages/coelho.png", value: [37, 38, 39, 40] },
+  { name: "11-CAVALO", url: "../../../assets/animalsImages/cavalo.png", value: [41, 42, 43, 44] },
+  { name: "12-ELEFANTE", url: "../../../assets/animalsImages/elefante.png", value: [45, 46, 47, 48] },
+  { name: "13-GALO", url: "../../../assets/animalsImages/galo.png", value: [49, 50, 51, 52] },
+  { name: "14-GATO", url: "../../../assets/animalsImages/gato.png", value: [53, 54, 55, 56] },
+  { name: "15-JACARÉ", url: "../../../assets/animalsImages/jacaré.png", value: [57, 58, 59, 60] },
+  { name: "16-LEÃO", url: "../../../assets/animalsImages/leão.png", value: [61, 62, 63, 64] },
+  { name: "17-MACACO", url: "../../../assets/animalsImages/macaco.png", value: [65, 66, 67, 68] },
+  { name: "18-PORCO", url: "../../../assets/animalsImages/porco.png", value: [69, 70, 71, 72] },
+  { name: "19-PAVÃO", url: "../../../assets/animalsImages/pavão.png", value: [73, 74, 75, 76] },
+  { name: "20-PERU", url: "../../../assets/animalsImages/peru.png", value: [77, 78, 79, 80] },
+  { name: "21-TOURO", url: "../../../assets/animalsImages/touro.png", value: [81, 82, 83, 84] },
+  { name: "22-TIGRE", url: "../../../assets/animalsImages/tigre.png", value: [85, 86, 87, 88] },
+  { name: "23-URSO", url: "../../../assets/animalsImages/urso.png", value: [89, 90, 91, 92] },
+  { name: "24-VEADO", url: "../../../assets/animalsImages/veado.png", value: [93, 94, 95, 96] },
+  { name: "25-VACA", url: "../../../assets/animalsImages/vaca.png", value: [97, 98, 99, 100] }
+];

@@ -1,0 +1,45 @@
+<div class="register-form-flex">
+  <img class="logo" src="../../../assets/PixZooLogoSlogan.png" alt="Logotipo">
+    <mat-card class="custom-card">
+      <mat-card-title class="form-title">
+        Registro
+      </mat-card-title>
+      <mat-card-content>
+        <form #registerForm="ngForm"> 
+          <mat-form-field class="full-width">
+            <input matInput type="text" placeholder="Nome" [(ngModel)]="name" name="name" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input type="password" matInput placeholder="Senha" [(ngModel)]="password" name="password" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Data de Nascimento" [ngModel]="birthday" (dateChange)="birthday = $event.value"  required>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput type="text" placeholder="CPF" [(ngModel)]="CPF" name="CPF" (input)="formatCPF($event)" required>
+          </mat-form-field>          
+          <mat-form-field class="full-width">
+            <input matInput type="number" placeholder="Depósito" [(ngModel)]="amountDeposited" name="amountDeposited">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <div class="error-message-409" *ngIf="error409">{{ errorMessage409 }}</div>
+      <mat-card-actions>
+        <div class="button-flex-container">
+          <button mat-raised-button color="primary" (click)="register()" [disabled]="!registerForm?.valid">Registrar</button>
+        </div>
+      </mat-card-actions>
+
+      <mat-progress-bar *ngIf="showProgressBar" mode="indeterminate"></mat-progress-bar>
+      
+      <div class="login-text">
+        Já possui uma conta? Faça seu <a routerLink="/login">Login!</a>
+      </div>
+    </mat-card>
+  </div>
+  

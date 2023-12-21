@@ -1,0 +1,76 @@
+
+<div class="user-bets">
+  <h2>Suas Apostas</h2>
+  <mat-card *ngFor="let bet of userBets" class="bet-card">
+    <div class="bet-details">
+      <div class="animal-details">
+        <div class="animal-image" *ngFor="let animalSelected of bet.animalsSelected">
+          <img [src]="getAnimalImageUrl(animalSelected.key)" alt="Animal Image" />
+        </div>
+      </div>
+      <div class="amount-details">
+        Valor da Aposta: R$ {{ bet.amountBet }}
+      </div>
+      <div class="amount-details">
+        Data: {{ bet.date }}
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div class=" actual-draw-container" *ngIf="verifydraw">
+  <h2>
+    Resultado Atual
+  </h2>
+  <div class="animal-card-container">
+    <ng-container *ngFor="let draw of actualdraw">
+    <ng-container *ngIf="!iscreated(draw)">
+      <mat-card class = "animal-card">
+        <img [src]="SearchUrl(draw)" 
+      />
+      <h3>
+        {{getname(draw)}}
+      </h3>
+
+      </mat-card>
+    </ng-container>
+    </ng-container>
+  </div>
+</div>
+
+<div class="user-data">
+  <h2>Seus Dados</h2>
+  <form [formGroup]="userDataForm">
+    <div class="form-group">
+      <mat-form-field class="custom-size-field">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Nome" formControlName="name" required>
+      </mat-form-field> 
+      <mat-form-field>
+        <mat-label>CPF</mat-label>
+        <input matInput placeholder="CPF" formControlName="CPF"  readonly>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="custom-size-field">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput placeholder="Aniversário" formControlName="birthday" readonly>
+      </mat-form-field>
+    </div>
+    <div class="form-group readonly">
+      <mat-form-field>
+        <mat-label>Saldo</mat-label>
+        <input matInput placeholder="Saldo atual" formControlName="amountDeposited"  readonly>
+      </mat-form-field>
+    </div>
+    <div class="form-group readonly">
+     
+    </div>
+  </form>
+  <button mat-raised-button color="primary" [disabled]="!areFieldsChanged()" (click)="changeCurrentUserData()">Alterar</button>
+  <button mat-raised-button color="warn" (click)="deleteAccount()">Excluir</button>
+</div>

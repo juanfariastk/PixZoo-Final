@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Fraudar Sorteio!</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Animais Definidos</mat-label>
+    <mat-select (selectionChange)="onDefinedAnimalSelectionChange($event)">
+      <mat-option *ngFor="let animal of definedAnimals" [value]="animal">{{ animal }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Novo Animal</mat-label>
+    <mat-select (selectionChange)="onNewAnimalSelectionChange($event)">
+      <mat-option *ngFor="let animal of allAnimals" [value]="animal.name">{{ animal.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="commitFraud()" class="sec-button">FRAUDAR!</button>
+  <button mat-button (click)="closeDialog()" class="close-button" >Fechar</button>
+</mat-dialog-actions>

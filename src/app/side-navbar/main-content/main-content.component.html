@@ -1,0 +1,19 @@
+ <h1>Faça a sua aposta!</h1>
+
+  <div class="animal-list">
+    <mat-card *ngFor="let animal of animals" (click)="toggleSelection(animal)" [ngClass]="{ 'selected': isSelected(animal) }" class="animal-item">
+      <img [src]="animal.url" alt="{{animal.name}}" class="animal-image" />
+      <div class="animal-name">{{animal.name}}</div>
+    </mat-card>
+  </div>
+
+<div class="bet-container">
+  <mat-form-field class="bet-input">
+    <mat-label>Digite o valor da sua aposta</mat-label>
+    <input matInput [(ngModel)]="betAmount" type="number" placeholder="Valor da aposta" required />
+  </mat-form-field>
+
+  <button mat-raised-button class="custom-button" (click)="apostar()"><span>Apostar</span></button>
+</div>
+
+
